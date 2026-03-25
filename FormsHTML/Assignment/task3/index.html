@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <form>
+        <h2>Registration Form</h2>
+        <div>
+            <label for="firstName">First Name : </label>
+            <input type="text" name="firstName" id="firstName" placeholder="Enter First Name">
+        </div>
+
+        <div>
+            <label for="lastName">Last Name : </label>
+            <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name">
+        </div>
+
+        <div>
+            <label for="email">Email : </label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div>
+            <label for="gender">Gender : </label>
+            <br>
+
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="gender" value="male">
+            <br>
+
+            <label for="gender">female</label>
+            <input type="radio" name="gender" id="gender" value="female">
+            <br>
+
+            <label for="gender">Other</label>
+            <input type="radio" name="gender" id="gender" value="Other">
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age">
+        </div>
+
+        <div>
+            <label for="paints">Perferences</label>
+            <br>
+            <label for="paints">Acrylic Painting</label>
+            <input type="checkbox" name="paints" id="paints" value="acrylicPaints">
+            <br>
+
+            <label for="paints">Oil Painting</label>
+            <input type="checkbox" name="paints" id="paints" value="oilPaints">
+            <br>
+
+            <label for="paints">Water Color Painting</label>
+            <input type="checkbox" name="paints" id="paints" value="waterColorpaints">
+        </div>
+
+        <div>
+            <label for="occuption">Occupation</label>
+            <select name="occuption">
+                <option value="">--Select Option--</option>
+                <option value="student">Student</option>
+                <option value="seniorCitizen">Senior Citizen</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio">Share few lines about yourself...</textarea>
+        </div>
+
+        <div>
+            <button type="reset">RESET</button>
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+
+</html>
