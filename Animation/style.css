@@ -1,0 +1,30 @@
+#div {
+  width: 1px;
+  border: 1px solid rgb(10, 10, 10);
+  height: 20px;
+  overflow: hidden;
+  text-wrap-mode: nowrap;
+  transition: width 6s ease-in-out 2s;
+}
+
+#div:hover {
+  width: 800px;
+}
+
+#div2{
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+    color: chartreuse;
+    transition: 
+    transform 2s linear,
+    color 3s linear;
+
+}
+
+#div2:hover{
+    transform: scale(1.5 1.2 2);
+    color: brown;
+    background-color: blueviolet;
+}

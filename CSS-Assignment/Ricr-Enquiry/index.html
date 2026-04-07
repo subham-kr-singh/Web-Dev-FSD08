@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="Navbar">
+        <img src="./logo.png" alt="logo">
+
+        <div class="NavLinks">
+            <span>Home</span>
+            <span>About</span>
+            <span>Courses</span>
+            <span>Fees</span>
+        </div>
+
+        <div class="NavLinks">
+            <p>+91-8889991736</p>
+            <button>Student Login</button>
+        </div>
+    </header>
+    <main>
+        <form id="form">
+            <div id="form-heading">
+                <h1>Enquiry Form</h1>
+                <p>Have questions or need assistance? Fill out the form below to connect with our team and explore your
+                    opportunities.</p>
+            </div>
+            <div class="input-field">
+                <div class="input-group" id="name">
+                    <label for="">Person Name*</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="input-group" id="Contact">
+                    <label for="">Contact Number*</label>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="input-field">
+                <div class="input-group" id="email">
+                    <label for="">Email*</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="input-group" id="Qualification">
+                    <label for="">Qualification*</label>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="input-field" id="college">
+                <label for="">College/School Name*</label>
+                <input type="text">
+            </div>
+            <div class="input-field">
+                <div class="input-group">
+                    <label for="year">Year*</label>
+
+                    <select id="year" id="info">
+                        <option>Select Year</option>
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+                    </select>
+                </div>
+                <div class="input-group" id="info">
+                    <label for="">Branch*</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="input-field">
+                <div class="box-container">
+                    <div class="input-group">
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="FullStackWebDevelopment"
+                                name="Interested_in_Which_Course[]"
+                                value="Full Stack Web Development - Placement Oriented">
+                            <label class="form-check form-check-label" for="FullStackWebDevelopment">
+                                Full Stack Web Development - Placement Oriented
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="DataSciencewithPython"
+                                name="Interested_in_Which_Course[]"
+                                value="Data Science with Python - Placement Oriented">
+                            <label class="form-check form-check-label" for="DataSciencewithPython">
+                                Data Science with Python - Placement Oriented
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="DataAnalyticswithPython"
+                                name="Interested_in_Which_Course[]"
+                                value="Data Analytics with Python - Placement Oriented">
+                            <label class="form-check form-check-label" for="DataAnalyticswithPython">
+                                Data Analytics with Python - Placement Oriented
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="BusinessAnalyst"
+                                name="Interested_in_Which_Course[]" value="Business Analyst">
+                            <label class="form-check form-check-label" for="BusinessAnalyst">
+                                Business Analyst
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="JavaProgramming"
+                                name="Interested_in_Which_Course[]" value="Java Programming">
+                            <label class="form-check form-check-label" for="JavaProgramming">
+                                Java Programming
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="PythonProgramming"
+                                name="Interested_in_Which_Course[]" value="Python Programming">
+                            <label class="form-check form-check-label" for="PythonProgramming">
+                                Python Programming
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="C++Programming"
+                                name="Interested_in_Which_Course[]" value="C/C++ Programming"
+                                data-gtm-form-interact-field-id="0">
+                            <label class="form-check form-check-label" for="C++Programming">
+                                C/C++ Programming
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check form-check-input" type="checkbox" id="Other"
+                                name="Interested_in_Which_Course[]" value="Other">
+                            <label class="form-check form-check-label" for="Other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="input-group">
+                        <label for="Source_of_Information" class="form-label">
+                            Source of Information <br> <b>(Only choose 'Received call from institute' if you actually
+                                got a
+                                call from us)</b>*
+                        </label>
+                        <select class="form-select form-control" type="select" id="Source_of_Information"
+                            name="Source_of_Information" placeholder="Source of Information" required="">
+                            <option value="" selected="" disabled="">
+                                Source of Information</option>
+                            <option value="newspaper">NewsPaper/Print Media</option>
+                            <option value="friends">Friends/Relatives</option>
+                            <option value="socialmedia">Social Media</option>
+                            <option value="workshop">Workshop/Seminar</option>
+                            <option value="call">Recieved call from Institute (Only choose if you actually got a call
+                                from
+                                us)</option>
+                            <option value="other">Other</option>
+                        </select>
+
+
+                    </div>
+
+                    <div class="div">
+                        <label for="Name_of_Executive" class="form-label">
+                            Name of Executive*
+                            <div class="input-group">
+                                <select class="form-select form-control" type="select" id="Name_of_Executive"
+                                    name="Name_of_Executive" placeholder="Name of Executive" required="" disabled="">
+                                    <option value="" selected="" disabled="">
+                                        Name of Executive</option>
+                                    <option value="kasim_khan">Kasim Khan</option>
+                                    <option value="anushree_choubey">Anushree Choubey</option>
+                                    <option value="sheshram">Sheshram Ahirwar</option>
+                                    <option value="shani_mishra">Shani Mishra</option>
+                                    <option value="sankalp_shukla">Sankalp Shukla</option>
+                                    <option value="deepali_tated">Deepali Tated</option>
+                                    <option value="anchal_sejwar">Anchal Sejwar</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="button-container">
+                <button>Submit</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

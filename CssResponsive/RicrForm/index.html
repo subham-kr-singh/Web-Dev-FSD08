@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form | RICR</title>
+    <!-- ioco -->
+     <link rel="icon" type="image/jfif" href="./images.jfif">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-start">
+                <div class="logo">
+                    <a href="#">
+                        <img src="logo.png" alt="RICR Logo">
+                    </a>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">IDE</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-end">
+                <a href="tel:+918889991736" class="phone-link vis">
+                    <i class="fa-solid fa-phone phone-icon"></i>
+                    +91 8889991736
+                </a>
+                <a href="#" class="btn btn-login">Student Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="enquiry-section">
+            <div class="container container-sm">
+                <div class="form-wrapper">
+                    <div class="form-header text-center">
+                        <h3>Enquiry Form</h3>
+                        <p>Have questions or need assistance? Fill out the form below to connect with our team and explore your opportunities.</p>
+                    </div>
+
+                    <form action="#" method="POST" class="enquiry-form">
+                        <div class="row">
+                            
+                            <div class="col-md-6 form-group">
+                                <label for="PersonName">Person Name*</label>
+                                <input type="text" id="PersonName" name="PersonName" placeholder="Person Name" required>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label for="MobileNo">Contact Number*</label>
+                                <input type="text" id="MobileNo" name="MobileNo" placeholder="Contact Number" required>
+                            </div>
+
+                            <div class="col-md-8 form-group">
+                                <label for="EmailID">Email*</label>
+                                <input type="email" id="EmailID" name="EmailID" placeholder="Email" required>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="Qualification">Qualification*</label>
+                                <input type="text" id="Qualification" name="Qualification" placeholder="Qualification" required>
+                            </div>
+
+                            <div class="col-md-12 form-group">
+                                <label for="CollegeName">College/School Name*</label>
+                                <input type="text" id="CollegeName" name="CollegeName" placeholder="College/School Name" required>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label for="Year">Year*</label>
+                                <div class="select-wrapper">
+                                    <select id="Year" name="Year" required>
+                                        <option value="" selected disabled>Year</option>
+                                        <option value="first">First Year</option>
+                                        <option value="second">Second Year</option>
+                                        <option value="third">Third Year</option>
+                                        <option value="fourth">Fourth Year</option>
+                                        <option value="passout">Passout</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label for="Branch">Branch*</label>
+                                <input type="text" id="Branch" name="Branch" placeholder="Branch" required>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label>Interested in Which Course*</label>
+                                <div class="checkbox-list">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Full Stack Web Development">
+                                        Full Stack Web Development - Placement Oriented
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Data Science with Python">
+                                        Data Science with Python - Placement Oriented
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Data Analytics with Python">
+                                        Data Analytics with Python - Placement Oriented
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Business Analyst">
+                                        Business Analyst
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Java Programming">
+                                        Java Programming
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Python Programming">
+                                        Python Programming
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="C/C++ Programming">
+                                        C/C++ Programming
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Course[]" value="Other">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label for="Source_of_Information">Source of Information <br><b>(Only choose 'Received call from institute' if you actually got a call from us)</b>*</label>
+                                        <div class="select-wrapper">
+                                            <select id="Source_of_Information" name="Source_of_Information" required>
+                                                <option value="" selected disabled>Source of Information</option>
+                                                <option value="newspaper">NewsPaper/Print Media</option>
+                                                <option value="friends">Friends/Relatives</option>
+                                                <option value="socialmedia">Social Media</option>
+                                                <option value="workshop">Workshop/Seminar</option>
+                                                <option value="call">Recieved call from Institute</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-12 form-group">
+                                        <label for="Name_of_Executive">Name of Executive*</label>
+                                        <div class="select-wrapper">
+                                            <select id="Name_of_Executive" name="Name_of_Executive" required>
+                                                <option value="" selected disabled>Name of Executive</option>
+                                                <option value="kasim_khan">Kasim Khan</option>
+                                                <option value="anushree_choubey">Anushree Choubey</option>
+                                                <option value="sheshram">Sheshram Ahirwar</option>
+                                                <option value="shani_mishra">Shani Mishra</option>
+                                                <option value="sankalp_shukla">Sankalp Shukla</option>
+                                                <option value="deepali_tated">Deepali Tated</option>
+                                                <option value="anchal_sejwar">Anchal Sejwar</option>
+                                            </select>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top row">
+                <!-- About -->
+                <div class="col-md-4 footer-col">
+                    <a href="#" class="footer-logo">
+                        <img src="logo.png" alt="RICR Logo">
+                    </a>
+                    <p class="footer-about">
+                        RICR is a subsidiary of Raj Digital Private Limited. It is a premier coding and robotics institute, empowering students with cutting-edge education and real-world skills for a tech-driven future.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2 footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Host a Workshop</a></li>
+                        <li><a href="#">Community Ambassador</a></li>
+                        <li><a href="#">Work With Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other Links & Policies -->
+                <div class="col-md-2 footer-col">
+                    <h4 class="footer-title">Other Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Edunest Facility</a></li>
+                    </ul>
+
+                    <h4 class="footer-title mt-20">Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Information -->
+                <div class="col-md-4 footer-col">
+                    <h4 class="footer-title">Information</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Minal Mall, 4th Floor, Minal Residency, JK Road, Bhopal Pincode (462023)</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="mailto:contact@ricr.in">contact@ricr.in</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+918889991736">+91 8889991736</a>
+                        </li>
+                    </ul>
+
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2024 - Raj Digital Private Limited | All Rights Reserved</p>
+                </div>
+                <div class="sitemap">
+                    <p><a href="#">Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

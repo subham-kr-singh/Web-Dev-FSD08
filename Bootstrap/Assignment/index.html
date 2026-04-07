@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Baseline Alignment</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-vh-100 d-flex align-items-end pb-5">
+
+    <div class="container-fluid">
+        <div class="row g-4 justify-content-center align-items-end">
+            
+            <div class="col-auto">
+                <div class="bg-white rounded-4 shadow-lg p-4 d-flex flex-column justify-content-center" 
+                     style="width: 430px; height: 450px;">
+                    
+                    <div class="position-relative mb-4">
+                        <span class="fs-3 fw-semibold">Login</span>
+                        <div class="position-absolute start-0 bottom-0 bg-primary rounded-pill" style="height: 3px; width: 30px; margin-bottom: -5px;"></div>
+                    </div>
+
+                    <form>
+                        <div class="input-group border-bottom border-2 mb-4">
+                            <span class="input-group-text bg-transparent border-0 text-secondary fs-4 px-0"><i class="uil uil-envelope"></i></span>
+                            <input type="email" class="form-control border-0 shadow-none ps-3" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-group border-bottom border-2 mb-3">
+                            <span class="input-group-text bg-transparent border-0 text-secondary fs-4 px-0"><i class="uil uil-lock"></i></span>
+                            <input type="password" class="form-control border-0 shadow-none ps-3" placeholder="Enter your password" required>
+                            <span class="input-group-text bg-transparent border-0 text-secondary cursor-pointer"><i class="uil uil-eye-slash"></i></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-4 small">
+                            <div class="form-check">
+                                <input class="form-check-input shadow-none" type="checkbox" id="logCheck">
+                                <label class="form-check-label text-secondary" for="logCheck">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none" style="color: #4070f4;">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn w-100 py-2 fw-medium rounded-3 text-white" style="background-color: #4070f4;">Login</button>
+                    </form>
+
+                    <div class="text-center mt-4 small text-secondary">
+                        Not a member? <a href="#" class="text-decoration-none fw-bold" style="color: #4070f4;">Signup Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="bg-white rounded-4 shadow-lg p-4 d-flex flex-column justify-content-center" 
+                     style="width: 430px; height: 620px;">
+                    
+                    <div class="position-relative mb-4">
+                        <span class="fs-3 fw-semibold">Registration</span>
+                        <div class="position-absolute start-0 bottom-0 bg-primary rounded-pill" style="height: 3px; width: 30px; margin-bottom: -5px;"></div>
+                    </div>
+
+                    <form>
+                        <div class="input-group border-bottom border-2 mb-4">
+                            <span class="input-group-text bg-transparent border-0 text-secondary fs-4 px-0"><i class="uil uil-user"></i></span>
+                            <input type="text" class="form-control border-0 shadow-none ps-3" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-group border-bottom border-2 mb-4">
+                            <span class="input-group-text bg-transparent border-0 text-secondary fs-4 px-0"><i class="uil uil-envelope"></i></span>
+                            <input type="email" class="form-control border-0 shadow-none ps-3" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group border-bottom border-2 mb-4">
+                            <span class="input-group-text bg-transparent border-0 text-secondary fs-4 px-0"><i class="uil uil-lock"></i></span>
+                            <input type="password" class="form-control border-0 shadow-none ps-3" placeholder="Create a password" required>
+                        </div>
+                        <div class="input-group border-bottom border-2 mb-3">
+                            <span class="input-group-text bg-transparent border-0 text-secondary fs-4 px-0"><i class="uil uil-lock"></i></span>
+                            <input type="password" class="form-control border-0 shadow-none ps-3" placeholder="Confirm a password" required>
+                            <span class="input-group-text bg-transparent border-0 text-secondary cursor-pointer"><i class="uil uil-eye-slash"></i></span>
+                        </div>
+
+                        <div class="form-check mt-4 small">
+                            <input class="form-check-input shadow-none" type="checkbox" id="termCon" required>
+                            <label class="form-check-label text-secondary" for="termCon">I accept all terms and conditions</label>
+                        </div>
+
+                        <button type="submit" class="btn w-100 py-2 fw-medium rounded-3 text-white mt-4" style="background-color: #4070f4;">Signup</button>
+                    </form>
+
+                    <div class="text-center mt-4 small text-secondary">
+                        Already a member? <a href="#" class="text-decoration-none fw-bold" style="color: #4070f4;">Login Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

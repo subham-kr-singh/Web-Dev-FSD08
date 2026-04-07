@@ -1,0 +1,8 @@
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #4070f4; 
+        }
+        .form-control:focus { 
+            border-bottom-color: #4070f4 !important; 
+        }
+        .cursor-pointer { cursor: pointer; }

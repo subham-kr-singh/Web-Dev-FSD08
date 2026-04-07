@@ -1,0 +1,42 @@
+*{
+    color: chartreuse;
+}
+
+h1{
+    color: black;
+}
+
+/*
+selector :- 
+universal selector :- *
+tags selector : -tags
+id selector :- #
+class selector :- .
+
+
+background-color: ;
+color: ;
+height:;
+width:;
+border: size type color;
+
+
+type of css uses:
+external
+internal
+inline
+
+use for Override css :- !important
+
+
+priority :- 
+
+universal :- 0
+tag :- 1
+class :- 2
+id:- 3
+inline:- 4
+!important:- 5
+
+universal < tag < class < id < inline < !important
+*/

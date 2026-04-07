@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.navp2{
+    display: flex;
+    gap: 50px;
+}
+.navp3{
+    display: flex;
+    gap: 50px;
+}
+.navp3 h5{
+    margin-top: 10px;
+}
+.navp3 button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(16, 44, 75, 0.954);
+    box-shadow: rgb(89, 169, 193) 3px 5px 0px ;
+    cursor: pointer;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    /* background-color: lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .top  h1{
+    text-align: center;
+}
+main .top p{
+    text-align: center;
+}
+.top{
+    height: 600px;
+    width: 800px;
+    background-color: rgb(176, 224, 254);
+    padding-top: 50px;
+    border-radius: 10px;
+}
+.top p{
+    margin-top: 10px;
+}
+.center{
+    height: 500px;
+    width: 500px;
+    /* background-color: lightgreen; */
+    position: absolute;
+    top: 170px;
+}
+.first{
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.first #name{
+    width: 250px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}
+.first #number{
+    width: 250px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}
+.second{
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+}
+.second #Email{
+    width: 350px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}
+.second #qualification{
+    width: 150px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}
+.third{
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+}
+.third #clg{
+    width: 510px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}
+.forth{
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.forth #year{
+    width: 250px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}
+.forth #Branch{
+    width: 250px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 17, 17);
+}

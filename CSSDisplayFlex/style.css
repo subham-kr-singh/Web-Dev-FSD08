@@ -1,0 +1,52 @@
+/* #main{
+    border: 1px solid black;
+    width: 600px;
+    height: 200px;
+    background-color: chartreuse;
+}
+
+.card{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 47px;
+    background-color: aquamarine;
+} */
+
+#main {
+  border: 1px solid black;
+  width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 100px; */
+  background-color: chartreuse;
+  margin: auto;
+}
+
+.card {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+#newdiv {
+  border: 1px solid black;
+  width: 600px;
+  height: 600px;
+  display: grid;
+  margin: auto;
+  grid-template-columns: auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.newcard {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}

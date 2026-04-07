@@ -1,0 +1,40 @@
+:root{
+    --main-color: rgb(95, 192, 4);
+    --submain-color: rgb(9, 15, 3);
+    --text-color: rgb(170, 6, 175);
+}
+
+button{
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    color: rgb(226, 216, 216);
+}
+
+#register{
+    background: var(--submain-color);
+}
+
+#login{
+    background-color: var(--main-color);
+}
+
+h1{
+    color:  var(--main-color);
+}
+
+h3{
+    color:var(--submain-color);
+}
+
+p{
+    color: var(--text-color);
+}
+
+th{
+    color: var(--main-color);
+}
+
+td{
+    color: var(--text-color);
+}
