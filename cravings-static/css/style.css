@@ -1,0 +1,348 @@
+:root {
+  --color-primary:          #c2410c;  /* Brand orange-red */
+  --color-primary-content:  #ffffff;  /* Text on primary background */
+  --color-secondary:        #6b7280;  /* Muted gray text */
+  --color-neutral:          #3f3f46;  /* Dark sections (footer, bars) */
+  --color-neutral-content:  #f4f4f5;  /* Text on dark backgrounds */
+  --color-base-100:         #fff8f1;  /* Warm white page background */
+  --color-base-200:         #f5ede5;  /* Slightly darker warm white */
+  --color-base-300:         #e7d9c9;  /* Borders and dividers */
+  --color-base-content:     #2d1b10;  /* Default dark text */
+  --color-error:            #ef4444;  /* Red for error states */
+  --color-success:          #22c55e;  /* Green for success states */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-base-100);
+  color: var(--color-base-content);
+}
+
+p, .subtext, .muted {
+  color: var(--color-secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-primary);
+  height: 64px;
+}
+.navbar .nav-link, .navbar-brand {
+  color: var(--color-primary-content) !important;
+}
+.navbar .btn-outline-light {
+  border-color: var(--color-primary-content);
+  color: var(--color-primary-content);
+}
+.navbar .btn-outline-light:hover {
+  background-color: var(--color-primary-content);
+  color: var(--color-primary);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-neutral);
+  color: var(--color-neutral-content);
+}
+footer a {
+  color: var(--color-neutral-content);
+  opacity: 0.8;
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+footer hr {
+  border-color: var(--color-neutral-content);
+  opacity: 0.2;
+}
+
+/* Typography Helpers */
+.text-primary-custom {
+  color: var(--color-primary) !important;
+}
+.text-neutral-content {
+  color: var(--color-neutral-content) !important;
+}
+.bg-primary-custom {
+  background-color: var(--color-primary) !important;
+  color: var(--color-primary-content);
+}
+.bg-neutral-custom {
+  background-color: var(--color-neutral) !important;
+  color: var(--color-neutral-content);
+}
+.bg-base-200 {
+  background-color: var(--color-base-200) !important;
+}
+
+/* Hero Sections */
+.hero-wrapper {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.hero-wrapper.about-hero, .hero-wrapper.help-hero, .hero-wrapper.policy-hero {
+  min-height: 50vh;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.hero-overlay-darker {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-primary-content);
+}
+.hero-content h1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+.hero-content p {
+  color: var(--color-primary-content);
+  opacity: 0.9;
+  font-size: 1.25rem;
+}
+
+/* Search Bar */
+.search-bar-wrapper {
+  background: white;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.search-bar-wrapper input {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+.search-bar-wrapper input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+  border: none;
+}
+.btn-primary-custom:hover {
+  background-color: #a3360a;
+  color: var(--color-primary-content);
+}
+
+/* Cards */
+.restaurant-card {
+  border: 1px solid var(--color-base-300);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-base-100);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.restaurant-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.restaurant-card img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+.restaurant-card .card-title {
+  font-weight: 700;
+  color: var(--color-base-content);
+}
+.badge-cuisine {
+  background-color: var(--color-base-200);
+  color: var(--color-base-content);
+  font-weight: 500;
+  border-radius: 50rem;
+}
+
+/* Home Section 2 Background */
+.home-section-2 {
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-base-100) 100%);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.home-section-2 .section-heading, .home-section-2 .section-subheading {
+  color: white;
+}
+.home-section-2 .section-subheading {
+  opacity: 0.8;
+}
+
+/* Contact & Feedback Body */
+.fullscreen-bg {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.contact-bg {
+  background-image: url('../images/contact-bg.jpg');
+}
+.feedback-bg {
+  background-image: url('../images/feedback-bg.jpg');
+}
+.form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* Helpers */
+.icon-circle {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-base-200);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+.icon-circle-lg {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-base-200);
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+.avatar {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.stat-box h2 {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+.stat-box p {
+  color: var(--color-neutral-content);
+  margin-bottom: 0;
+}
+
+/* Accordion */
+.accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+  background-color: var(--color-base-200);
+  box-shadow: inset 0 -1px 0 var(--color-base-300);
+}
+.accordion-button:hover {
+  background-color: var(--color-base-200);
+}
+
+/* Auth Pages */
+.auth-wrapper {
+  min-height: calc(100vh - 64px); 
+  background-image: url('../images/auth-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+.auth-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+}
+.auth-card-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.auth-floating-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  padding: 2.5rem;
+  max-width: 480px;
+}
+.form-control-light {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+.form-control-light:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(194, 65, 12, 0.25);
+  outline: none;
+}
+.radio-group-horizontal {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.radio-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--color-base-content);
+  cursor: pointer;
+}
+
+/* Order Now Pill Filters */
+.filter-pills .btn {
+  border-radius: 50rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-base-300);
+  color: var(--color-base-content);
+  background-color: transparent;
+}
+.filter-pills .btn.active, .filter-pills .btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
