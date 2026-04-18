@@ -12,11 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* ── Help Center Page ─────────────────────────────────── */
-        .help-page-wrapper {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
             min-height: 100vh;
             background-image: url('images/help-bg.jpg');
             background-size: cover;
@@ -26,162 +30,257 @@
             flex-direction: column;
         }
 
-        .help-page-wrapper main {
+        /* ── Navbar ─────────────────────────────────── */
+        .navbar {
+            background-color: #c2410c;
+            height: 64px;
+            flex-shrink: 0;
+        }
+
+        .navbar .nav-link,
+        .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar .btn-outline-light {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .navbar .btn-outline-light:hover {
+            background-color: #fff;
+            color: #c2410c;
+        }
+
+        /* ── Main fills remaining height ────────────── */
+        main {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 3rem 1rem;
+            padding: 2.5rem 1rem;
         }
 
-        /* Dark glassmorphism card */
-        .help-glass-card {
-            background: rgba(30, 20, 12, 0.72);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.10);
+        /* ── Glass card ─────────────────────────────── */
+        .hc-card {
+            background: rgba(25, 16, 8, 0.75);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 16px;
-            padding: 2.5rem;
+            padding: 2.25rem 2.5rem;
             width: 100%;
-            max-width: 860px;
+            max-width: 900px;
             color: #f4f4f5;
         }
 
-        /* Card heading */
-        .help-card-heading {
-            font-size: 1.75rem;
+        /* ── Card header ────────────────────────────── */
+        .hc-title {
+            font-size: 1.8rem;
             font-weight: 800;
-            color: var(--color-primary);
+            color: #c2410c;
             text-align: center;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.35rem;
         }
 
-        .help-card-subheading {
+        .hc-subtitle {
             text-align: center;
-            color: rgba(244, 244, 245, 0.75);
-            font-size: 0.95rem;
-            margin-bottom: 1.8rem;
+            color: rgba(244, 244, 245, 0.72);
+            font-size: 0.92rem;
+            margin-bottom: 2rem;
         }
 
-        /* Column labels */
-        .help-col-label {
-            font-size: 0.72rem;
+        /* ── Two-column body ────────────────────────── */
+        .hc-body {
+            display: flex;
+            gap: 0;
+            align-items: stretch;
+        }
+
+        .hc-col {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hc-col-left {
+            padding-right: 2rem;
+        }
+
+        .hc-col-right {
+            padding-left: 2rem;
+        }
+
+        .hc-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.14);
+            flex-shrink: 0;
+        }
+
+        /* ── Column label ───────────────────────────── */
+        .hc-label {
+            font-size: 0.68rem;
             font-weight: 700;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: rgba(244, 244, 245, 0.55);
-            margin-bottom: 1rem;
+            color: rgba(244, 244, 245, 0.50);
+            margin-bottom: 0.9rem;
         }
 
-        /* FAQ Accordion – dark theme */
-        .help-accordion .accordion-item {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+        /* ── Accordion ──────────────────────────────── */
+        .hc-accordion .accordion-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14) !important;
             border-radius: 8px !important;
             overflow: hidden;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.55rem;
         }
 
-        .help-accordion .accordion-button {
+        .hc-accordion .accordion-button {
             background: transparent;
             color: #f4f4f5;
             font-weight: 600;
-            font-size: 0.9rem;
-            padding: 0.85rem 1rem;
-            box-shadow: none;
+            font-size: 0.88rem;
+            padding: 0.8rem 1rem;
+            box-shadow: none !important;
+            gap: 0.5rem;
         }
 
-        .help-accordion .accordion-button:not(.collapsed) {
+        .hc-accordion .accordion-button:not(.collapsed) {
             background: rgba(255, 255, 255, 0.06);
             color: #f4f4f5;
-            box-shadow: none;
         }
 
-        .help-accordion .accordion-button::after {
-            filter: invert(1) brightness(2);
+        /* Replace chevron with +/– using pseudo-element */
+        .hc-accordion .accordion-button::after {
+            content: '+';
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1;
+            background-image: none;
+            color: rgba(244, 244, 245, 0.60);
+            width: auto;
+            height: auto;
+            transform: none !important;
+            margin-left: auto;
+            flex-shrink: 0;
         }
 
-        .help-accordion .accordion-button i {
-            color: rgba(244, 244, 245, 0.70);
-            margin-right: 0.55rem;
+        .hc-accordion .accordion-button:not(.collapsed)::after {
+            content: '−';
         }
 
-        .help-accordion .accordion-body {
+        .hc-accordion .accordion-button i {
+            color: rgba(244, 244, 245, 0.65);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .hc-accordion .accordion-body {
             background: rgba(255, 255, 255, 0.04);
-            color: rgba(244, 244, 245, 0.80);
-            font-size: 0.88rem;
-            padding: 0.75rem 1rem 1rem;
+            color: rgba(244, 244, 245, 0.78);
+            font-size: 0.86rem;
+            padding: 0.7rem 1rem 0.9rem 1rem;
             line-height: 1.65;
         }
 
-        /* Support ticket form – dark inputs */
-        .help-form .form-control,
-        .help-form .form-select {
-            background: rgba(255, 255, 255, 0.10);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            color: #f4f4f5;
-            border-radius: 8px;
-            padding: 0.65rem 0.9rem;
-            font-size: 0.88rem;
+        /* ── Form inputs ────────────────────────────── */
+        .hc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
         }
 
-        .help-form .form-control::placeholder {
+        .hc-form .hc-input,
+        .hc-form .hc-select,
+        .hc-form .hc-textarea {
+            width: 100%;
+            background: rgba(120, 100, 85, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 7px;
+            color: #f4f4f5;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            padding: 0.65rem 0.9rem;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .hc-form .hc-input::placeholder,
+        .hc-form .hc-textarea::placeholder {
             color: rgba(244, 244, 245, 0.45);
         }
 
-        .help-form .form-control:focus,
-        .help-form .form-select:focus {
-            background: rgba(255, 255, 255, 0.14);
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 0.2rem rgba(194, 65, 12, 0.3);
-            color: #f4f4f5;
-            outline: none;
+        .hc-form .hc-select {
+            /* arrow */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(244,244,245,0.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.85rem center;
+            padding-right: 2.2rem;
         }
 
-        /* Fix select option colors (browser default) */
-        .help-form .form-select option {
+        .hc-form .hc-select option {
             background: #2d1b10;
             color: #f4f4f5;
         }
 
-        .help-form textarea.form-control {
+        .hc-form .hc-input:focus,
+        .hc-form .hc-select:focus,
+        .hc-form .hc-textarea:focus {
+            border-color: #c2410c;
+            background: rgba(140, 115, 95, 0.50);
+            box-shadow: 0 0 0 2px rgba(194, 65, 12, 0.28);
+        }
+
+        .hc-form .hc-textarea {
             resize: none;
+            min-height: 108px;
         }
 
-        .btn-help-submit {
-            background-color: var(--color-primary);
-            color: #ffffff;
-            border: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 0.7rem;
-            border-radius: 8px;
-            transition: background-color 0.2s, transform 0.15s;
+        .hc-btn-submit {
             width: 100%;
+            background-color: #c2410c;
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 0.72rem;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.15s;
+            margin-top: 0.2rem;
         }
 
-        .btn-help-submit:hover {
+        .hc-btn-submit:hover {
             background-color: #a3360a;
             transform: translateY(-1px);
         }
 
-        /* Divider between columns */
-        .help-divider {
-            width: 1px;
-            background: rgba(255, 255, 255, 0.12);
-            align-self: stretch;
-            margin: 0 1.5rem;
-        }
-
+        /* ── Responsive ─────────────────────────────── */
         @media (max-width: 767px) {
-            .help-glass-card {
-                padding: 1.75rem 1.25rem;
+            .hc-card {
+                padding: 1.6rem 1.2rem;
             }
 
-            .help-divider {
-                width: 100%;
-                height: 1px;
-                margin: 1.5rem 0;
+            .hc-body {
+                flex-direction: column;
+            }
+
+            .hc-col-left {
+                padding-right: 0;
+                padding-bottom: 1.6rem;
+            }
+
+            .hc-col-right {
+                padding-left: 0;
+                padding-top: 1.6rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.14);
+            }
+
+            .hc-divider {
+                display: none;
             }
         }
     </style>
@@ -211,165 +310,109 @@
         </div>
     </nav>
 
-    <div class="help-page-wrapper">
-        <main>
-            <div class="help-glass-card">
+    <main>
+        <div class="hc-card">
 
-                <!-- Card Header -->
-                <h1 class="help-card-heading">
-                    <i class="bi bi-question-circle me-2"></i>Help Center
-                </h1>
-                <p class="help-card-subheading">Browse FAQs or submit a support ticket below.</p>
+            <!-- Header -->
+            <h1 class="hc-title">
+                <i class="bi bi-question-circle me-1"></i> Help Center
+            </h1>
+            <p class="hc-subtitle">Browse FAQs or submit a support ticket below.</p>
 
-                <!-- Two columns: FAQ | Form -->
-                <div class="d-flex flex-column flex-md-row">
+            <!-- Two columns -->
+            <div class="hc-body">
 
-                    <!-- LEFT: FAQ -->
-                    <div class="flex-grow-1" style="min-width: 0;">
-                        <p class="help-col-label">Frequently Asked Questions</p>
-                        <div class="accordion help-accordion" id="faqAccordion">
+                <!-- LEFT: FAQ -->
+                <div class="hc-col hc-col-left">
+                    <p class="hc-label">Frequently Asked Questions</p>
+                    <div class="accordion hc-accordion" id="faqAccordion">
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                        <i class="bi bi-lock"></i> How do I track my order?
-                                    </button>
-                                </h2>
-                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Go to your dashboard → Orders and click on the active order to see live
-                                        tracking.
-                                    </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="bi bi-lock"></i> How do I track my order?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Go to your dashboard → Orders and click on the active order to see live tracking.
                                 </div>
                             </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                        <i class="bi bi-credit-card"></i> How do I get a refund?
-                                    </button>
-                                </h2>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Submit a ticket below with your Order ID and our team will process it within 2–3
-                                        business days.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq3" aria-expanded="true" aria-controls="faq3">
-                                        <i class="bi bi-bicycle"></i> My rider is late. What do I do?
-                                    </button>
-                                </h2>
-                                <div id="faq3" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        You can contact your rider directly via the order page or raise a support
-                                        ticket.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                        <i class="bi bi-person-gear"></i> How do I update my account info?
-                                    </button>
-                                </h2>
-                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Navigate to your dashboard → Settings to update your profile details.
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-                    </div>
 
-                    <!-- Vertical divider -->
-                    <div class="help-divider d-none d-md-block"></div>
-                    <hr class="d-md-none" style="border-color: rgba(255,255,255,0.15); margin: 1.5rem 0;">
-
-                    <!-- RIGHT: Support Ticket Form -->
-                    <div class="flex-grow-1" style="min-width: 0;">
-                        <p class="help-col-label">Submit a Support Ticket</p>
-                        <form class="help-form" onsubmit="return false;">
-                            <div class="d-flex flex-column gap-3">
-                                <input id="hc-name" type="text" class="form-control" placeholder="Enter your full name">
-                                <input id="hc-email" type="email" class="form-control" placeholder="Enter your email">
-                                <select id="hc-issue" class="form-select">
-                                    <option value="" disabled selected>Select issue type</option>
-                                    <option>Delivery Issue</option>
-                                    <option>Refund Request</option>
-                                    <option>Account Issue</option>
-                                    <option>App Bug</option>
-                                    <option>Other</option>
-                                </select>
-                                <input id="hc-order" type="text" class="form-control" placeholder="e.g. ORD-00123">
-                                <textarea id="hc-desc" class="form-control" rows="4"
-                                    placeholder="Please describe the problem in detail..."></textarea>
-                                <button id="hc-submit" type="submit" class="btn-help-submit">Submit Ticket</button>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="bi bi-credit-card"></i> How do I get a refund?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Submit a ticket with your Order ID and our team will process it within 2–3 business days.
+                                </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
 
-                </div>
-            </div>
-        </main>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="bi bi-bicycle"></i> My rider is late. What do I do?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can contact your rider directly via the order page or raise a support ticket.
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Footer -->
-        <footer class="pt-5 pb-3">
-            <div class="container">
-                <div class="row g-4 mb-4">
-                    <div class="col-lg-3 col-md-6 text-center text-md-start">
-                        <img src="images/logo-circle.png" alt="Cravings" width="64" class="mb-3">
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <h5 class="text-white fw-bold mb-3">Quick Links</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="order-now.html">Order Now</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <h5 class="text-white fw-bold mb-3">For Restaurants</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a href="register.html">Partner With Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <h5 class="text-white fw-bold mb-3">For Riders</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a href="register.html">Become a Rider</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white fw-bold mb-3">Feedback & Support</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a href="feedback.html">Give Feedback</a></li>
-                            <li><a href="help-center.html">Help Center</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="bi bi-person-gear"></i> How do I update my account info?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Navigate to your dashboard → Settings to update your profile details.
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <hr>
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3 pt-2">
-                    <p class="mb-2 mb-md-0 opacity-75 small">&copy; 2026 Cravings.</p>
-                    <div class="d-flex gap-3 small">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="sitemap.html">Site Map</a>
-                    </div>
+
+                <!-- Vertical divider -->
+                <div class="hc-divider"></div>
+
+                <!-- RIGHT: Form -->
+                <div class="hc-col hc-col-right">
+                    <p class="hc-label">Submit a Support Ticket</p>
+                    <form class="hc-form" onsubmit="return false;">
+                        <input id="hc-name"  type="text"   class="hc-input"    placeholder="Enter your full name">
+                        <input id="hc-email" type="email"  class="hc-input"    placeholder="Enter your email">
+                        <select id="hc-type" class="hc-select">
+                            <option value="" disabled selected>Select issue type</option>
+                            <option>Delivery Issue</option>
+                            <option>Refund Request</option>
+                            <option>Account Issue</option>
+                            <option>App Bug</option>
+                            <option>Other</option>
+                        </select>
+                        <input id="hc-order" type="text"  class="hc-input"    placeholder="e.g. ORD-00123">
+                        <textarea id="hc-desc" class="hc-textarea" rows="4"
+                            placeholder="Please describe the problem in detail..."></textarea>
+                        <button id="hc-submit" type="submit" class="hc-btn-submit">Submit Ticket</button>
+                    </form>
                 </div>
+
             </div>
-        </footer>
-    </div>
+        </div>
+    </main>
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
