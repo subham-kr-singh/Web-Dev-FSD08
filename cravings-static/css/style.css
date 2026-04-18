@@ -346,3 +346,99 @@ footer hr {
   color: white;
   border-color: var(--color-primary);
 }
+
+
+/* ── Section subheadings ─────────────────────────── */
+.section-subhead {
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+}
+
+/* ── Stats Section ───────────────────────────────── */
+.stats-section {
+  background-color: var(--color-base-200);
+}
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+.stat-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.stat-card h5 {
+  color: var(--color-base-content);
+}
+.stat-card p {
+  color: var(--color-secondary);
+}
+
+/* ── Testimonials Section ────────────────────────── */
+.testimonials-section {
+  background-color: var(--color-base-100);
+}
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+.testimonial-card p {
+  color: var(--color-secondary);
+  line-height: 1.65;
+  flex-grow: 1;
+}
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ── Partner CTA Section ─────────────────────────── */
+.partner-cta-section {
+  background-color: var(--color-primary);
+}
+.partner-cta-section h2 {
+  color: #ffffff;
+}
+.partner-cta-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-partner-cta {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-partner-cta:hover {
+  background-color: var(--color-base-200);
+  color: var(--color-primary);
+  transform: scale(1.04);
+}
