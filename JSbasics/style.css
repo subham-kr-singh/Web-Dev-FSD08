@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles apply if the browser window is 600px wide or less */
+@media screen and (max-width: 600px) {
+  main{
+    flex-direction: column;
+  }
+}
+
+
+.right{
+    width: 50%;
+    background-color:rgb(112, 3, 3);
+
+}
+
+.text{
+    border: 3px solid rgb(112, 3, 3);
+    padding: 30px;
+    margin: 45px;
+}
+
+.left .text h1{
+    color: rgb(112, 3, 3);;
+    font-weight: bold;
+    font-size: 125px;
+}
