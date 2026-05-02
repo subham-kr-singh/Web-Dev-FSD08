@@ -24,9 +24,9 @@ const add = (a, b) => a + b;
 
 console.log(add(10, 12));
 
-const fun2 = name => {
-    console.log("");
-}
+const fun2 = (name) => {
+  console.log("");
+};
 
 //Passed as argument (callback)
 
