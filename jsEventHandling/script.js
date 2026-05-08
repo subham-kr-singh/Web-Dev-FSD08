@@ -33,5 +33,9 @@ document
   .getElementById("blubColour")
   .addEventListener("change", changeBlubColour);
 
+function reset() {
+  window.location.reload;
+}
 
-  window.location.reload
+
+document.getElementById("").addEventListener("click",() => {})
