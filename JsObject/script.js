@@ -186,25 +186,30 @@ const db = [
 
 // console.log(Object.entries(db));
 
-let ar = [22, 43, 6, 74, 8, 91, 100, 5, 23, 6, 45];
+// let ar = [22, 43, 6, 74, 8, 91, 100, 5, 23, 6, 45];
 
-ar.sort((a, b) => a - b);
-console.log(ar);
+// ar.sort((a, b) => a - b);
+// console.log(ar);
 
-let val = ar.find((val) => val > 20);
-console.log(val);
+// let val = ar.find((val) => val > 20);
+// console.log(val);
 
-let val1 = ar.findIndex((val) => val === 6);
-console.log(val1);
+// let val1 = ar.findIndex((val) => val === 6);
+// console.log(val1);
 
-console.log(ar.findLastIndex((val) => val === 6));
+// console.log(ar.findLastIndex((val) => val === 6));
 
-db.map((element, idx) => {
-  console.log(idx, element.name);
-});
+// db.map((element, idx) => {
+//   console.log(idx, element.name);
+// });
 
-let array = [22, 43, 6, 74, 8, 91, 100, 5, 23, 6, 45];
+// let array = [22, 43, 6, 74, 8, 91, 100, 5, 23, 6, 45];
 
-console.log(array.filter((val) => val > 20));
+// console.log(array.filter((val) => val > 20));
 
-console.log(array.find((val) => val > 20));
+// console.log(array.find((val) => val > 20));
+
+let a = 4.62738374829218846281648971369;
+console.log(a.toFixed(3));
+
+console.log(`hello every one ${db[1].name}`);
