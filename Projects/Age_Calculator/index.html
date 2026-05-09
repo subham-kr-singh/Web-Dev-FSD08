@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <main class="vh-100 d-flex flex-column justify-content-center align-items-center">
+        <div
+            class=" box h-50 w-25 bg-light border shadow m-auto mt-5 d-flex flex-column justify-content-center align-items-center">
+            <h1>age calculator</h1>
+
+            <form class="d-flex flex-column justify-content-center align-items-center gap-3 w-75">
+                <label for="" class="">enter your date of birth</label>
+                <input type="date" class="form-control" id="DOB">
+
+                <label for="">Current Date</label>
+                <input type="date" class="form-control w-100" id="CurrentDate">
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br>
+            <div class="fw-medium fs-5">Your Age is : <span id="yourAge"></span></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
