@@ -11,15 +11,18 @@
 </head>
 
 <body>
-
-    <main class="d-flex justify-content-center align-items-center vh-100">
-        <div class="main">
-                <h1>Guess The Number</h1>
-                <p>We have selected a number between 1 - 10. see if you can guess it.</p>
-                <label for="guessInput">Enter your guess:</label>
-                <input type="text" id="guessInput" class="form-control">
-                <button id="guessButton" class="btn btn-primary mt-2">Submit Guess</button>
-        </div>
+    <main class="vh-100 d-flex justify-content-center align-items-center">
+        <form class="d-flex flex-column gap-3">
+            <label for="basicSalary">Basic Salary:</label>
+            <input type="text" id="basicSalary" placeholder="Enter basic salary" class="form-control">
+            <button type="submit" class="btn btn-primary">Calculate Gross Salary</button>
+            <div id="result" class="mt-3">
+                <p id="basicSalaryResult"></p>
+                <p id="hraResult"></p>
+                <p id="daResult"></p>
+                <p id="grossSalaryResult"></p>
+            </div>
+        </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
