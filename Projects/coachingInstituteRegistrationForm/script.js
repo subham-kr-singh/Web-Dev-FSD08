@@ -13,20 +13,19 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
   //Course Information:
   const course = document.getElementById("course").value;
-  const batch = document.getElementById("batch").value;
   const timings = [];
   document.querySelectorAll("input[name='timings']:checked").forEach((item) => {
     timings.push(item.value);
   });
 
   //Address:
-  const address = document.getElementById("address").value;
+  const address = document.getElementById("residentialAddress").value;
   const city = document.getElementById("city").value;
-  const pincode = document.getElementById("pincode").value;
+  const pincode = document.getElementById("pinCode").value;
 
   //Guardian Details:
   const guardianName = document.getElementById("guardianName").value;
-  const guardianPhone = document.getElementById("guardianPhone").value;
+  const guardianPhone = document.getElementById("guardianMobile").value;
 
   console.log(fullName);
   console.log(email);
@@ -35,7 +34,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
   console.log(gender);
   console.log(highestQualification);
   console.log(course);
-  console.log(batch);
   console.log(address);
   console.log(city);
   console.log(pincode);
@@ -51,16 +49,15 @@ document.querySelector("form").addEventListener("submit", (event) => {
   document.querySelector("input[name='gender']:checked").checked = false;
   document.getElementById("qualification").value = "";
   document.getElementById("course").value = "";
-  document.getElementById("batch").value = "";
-  document.getElementById("address").value = "";
+  document.getElementById("residentialAddress").value = "";
   document.getElementById("city").value = "";
-  document.getElementById("pincode").value = "";
+  document.getElementById("pinCode").value = "";
   document.getElementById("guardianName").value = "";
-  document.getElementById("guardianPhone").value = "";
+  document.getElementById("guardianMobile").value = "";
   document.querySelectorAll("input[name='timings']:checked").forEach((item) => {
     item.checked = false;
   });
-  
+
 });
 
 document.querySelector("form").addEventListener("reset", (event) => {
