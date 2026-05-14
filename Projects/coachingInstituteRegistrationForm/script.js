@@ -29,20 +29,20 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
   // save data in Json form
   const registrationData = {
-    "fullName": fullName,
-    "email": email,
-    "phone": phone,
-    "dob": dob,
-    "gender": gender,
-    "highestQualification": highestQualification,
-    "marks": marks,
-    "course": course,
-    "timings": timings,
-    "address": address,
-    "city": city,
-    "pincode": pincode,
-    "guardianName": guardianName,
-    "guardianPhone": guardianPhone,
+    fullName: fullName,
+    email: email,
+    phone: phone,
+    dob: dob,
+    gender: gender,
+    highestQualification: highestQualification,
+    marks: marks,
+    course: course,
+    timings: timings,
+    address: address,
+    city: city,
+    pincode: pincode,
+    guardianName: guardianName,
+    guardianPhone: guardianPhone,
   };
 
   validateData(registrationData)
@@ -52,29 +52,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
   console.log(registrationData);
 
-  // define uncheck and blank on all input fields
-  //   document.getElementById("fullName").value = "";
-  //   document.getElementById("email").value = "";
-  //   document.getElementById("mobile").value = "";
-  //   document.getElementById("dob").value = "";
-  //   document.querySelector("input[name='gender']:checked").checked = false;
-  //   document.getElementById("qualification").value = "";
-  //   document.getElementById("marks").value = "";
-  //   document.getElementById("course").value = "";
-  //   document.getElementById("residentialAddress").value = "";
-  //   document.getElementById("city").value = "";
-  //   document.getElementById("pinCode").value = "";
-  //   document.getElementById("guardianName").value = "";
-  //   document.getElementById("guardianMobile").value = "";
-
-  document.querySelectorAll("input").forEach((input) => {
-    input.value = "";
-  });
   document.querySelector("input[name='gender']:checked").checked = false;
-  document.getElementById("qualification").value = "";
-  document.getElementById("course").value = "";
   document.querySelectorAll("input[name='timings']:checked").forEach((item) => {
     item.checked = false;
+  });
+  document.querySelectorAll(".err").forEach((input) => {
+    input.value = "";
   });
 });
 
