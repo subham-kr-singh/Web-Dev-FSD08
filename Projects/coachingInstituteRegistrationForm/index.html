@@ -15,113 +15,140 @@
     <main class="d-flex align-items-center p-5 gap-3 flex-lg-column">
         <div class="container border-black p-5 border">
             <form class="container d-flex flex-column gap-4 bg-white p-2">
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="fullName">Full Name<span class="text-danger">*</span></label>
-                    <input type="text" id="fullName" name="fullName" class="form-control"
-                        placeholder="Enter your Full Name" required>
-                    <span id="fullNameError" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="email">Email Address<span class="text-danger">*</span> </label>
-                    <input type="email" id="email" name="email" class="form-control"
-                        placeholder="Enter your Email Address" required>
-                    <span id="emailError" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="mobile">Mobile Number<span class="text-danger">*</span></label>
-                    <input type="text" id="mobile" name="mobile" class="form-control"
-                        placeholder="Enter your Mobile Number" required>
-                    <span id="mobileError" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="dob">Date of Birth<span class="text-danger">*</span></label>
-                    <input type="date" id="dob" name="dob" class="form-control" required
-                        placeholder="dd/mm/yyyy required">
-                    <span id="dobError" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="qualification" class="text-capitalize fw-medium">highest education qualification<span
-                            class="text-danger">*</span></label>
-                    <input type="text" name="qualification" id="qualification" class="form-control"
-                        placeholder="Enter your highest education qualification" required>
-
-                    <span id="qualificationError" class="text-danger"></span>
-                </div>
-
-
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="course">Preferred Course<span class="text-danger">*</span></label>
-
-                    <select class="form-control" id="course" name="course">
-                        <option value="">Select Course</option>
-                        <option value="iitJee">IIT-JEE</option>
-                        <option value="neet">NEET</option>
-                        <option value="bankingExams">Banking Exams</option>
-                        <option value="ca/cs">CA/CS</option>
-                        <option value="upsc">UPSC</option>
-                    </select>
-                    <span id="courseError" class="text-danger"></span>
-                </div>
-
-
-                <div class="p-2 mt-2 d-flex gap-5 align-items-center">
-                    <label for="timings" class="form-label fw-medium">Batch Timing Preference <span
-                            class="text-danger">*</span></label>
-
-                    <div class="d-flex gap-2">
-                        <input type="checkbox" name="timings" id="morning" value="morning" class="form-check" />
-                        <span>Morning</span>
+                <section>
+                    <div class="d-flex flex-column gap-2">
+                        <label for="fullName">Full Name<span class="text-danger">*</span></label>
+                        <input type="text" id="fullName" name="fullName" class="form-control"
+                            placeholder="Enter your Full Name" required>
+                        <span id="fullNameError" class="text-danger"></span>
                     </div>
-                    <div class="d-flex gap-2">
-                        <input type="checkbox" name="timings" id="evening" value="evening" class="form-check" />
-                        <span>Evening</span>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="email">Email Address<span class="text-danger">*</span> </label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="Enter your Email Address" required>
+                        <span id="emailError" class="text-danger"></span>
                     </div>
-                    <div class="d-flex gap-2">
-                        <input type="checkbox" name="timings" id="afternoon" value="afternoon" class="form-check" />
-                        <span>AfterNoon</span>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="mobile">Mobile Number<span class="text-danger">*</span></label>
+                        <input type="text" id="mobile" name="mobile" class="form-control"
+                            placeholder="Enter your Mobile Number" required>
+                        <span id="mobileError" class="text-danger"></span>
                     </div>
-                    <div class="d-flex gap-2">
-                        <input type="checkbox" name="timings" id="weekends" value="weekends" class="form-check" />
-                        <span>Weekends</span>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="dob">Date of Birth<span class="text-danger">*</span></label>
+                        <input type="date" id="dob" name="dob" class="form-control" required
+                            placeholder="dd/mm/yyyy required">
+                        <span id="dobError" class="text-danger"></span>
                     </div>
-                </div>
 
-                <div class="d-flex flex-column gap-2">
-                    <label for="residentialAddress">Residential Address<span class="text-danger">*</span></label>
-                    <input type="text" name="residentialAddress" id="residentialAddress" class="form-control" required>
-                </div>
+                    <div class="p-2 mt-2 d-flex gap-5">
+                        <label for="gender" class="form-label fw-bold">Gender</label>
+                        <div>
+                            <input type="radio" name="gender" id="male" value="male" class="form-switch" />
+                            <span>Male</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="female" value="female" class="form-switch" />
+                            <span>Female</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="others" value="others" class="form-switch" />
+                            <span>Others</span>
+                        </div>
+                        <span class="text-danger small" id="genderError"></span>
+                    </div>
+                </section>
 
-                <div class="d-flex flex-column gap-2">
-                    <label for="city">City<span class="text-danger">*</span></label>
-                    <input type="text" name="city" id="city" class="form-control" required>
-                </div>
+                <section>
 
-                <div class="d-flex flex-column gap-2">
-                    <label for="pinCode">Pin code<span class="text-danger">*</span></label>
-                    <input type="number" name="pinCode" id="pinCode" class="form-control" required>
-                </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label for="qualification" class="text-capitalize fw-medium">highest education
+                            qualification<span class="text-danger">*</span></label>
+                        <input type="text" name="qualification" id="qualification" class="form-control"
+                            placeholder="Enter your highest education qualification" required>
 
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="guardianName">Full Name <span class="text-danger">*</span></label>
-                    <input type="text" id="guardianName" name="guardianName" class="form-control"
-                        placeholder="Enter guardian's full name" required>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <label for="guardianMobile">Mobile Number <span class="text-danger">*</span></label>
-                    <input type="text" id="guardianMobile" name="guardianMobile" class="form-control"
-                        placeholder="Enter guardian's mobile number" required>
-                    <span id="guardianMobileError" class="text-danger"></span>
-                </div>
+                        <span id="qualificationError" class="text-danger"></span>
+                    </div>
 
 
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="course">Preferred Course<span class="text-danger">*</span></label>
+
+                        <select class="form-control" id="course" name="course">
+                            <option value="">Select Course</option>
+                            <option value="iitJee">IIT-JEE</option>
+                            <option value="neet">NEET</option>
+                            <option value="bankingExams">Banking Exams</option>
+                            <option value="ca/cs">CA/CS</option>
+                            <option value="upsc">UPSC</option>
+                        </select>
+                        <span id="courseError" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="p-2 mt-2 d-flex gap-5 align-items-center">
+                        <label for="timings" class="form-label fw-medium">Batch Timing Preference <span
+                                class="text-danger">*</span></label>
+
+                        <div class="d-flex gap-2">
+                            <input type="checkbox" name="timings" id="morning" value="morning" class="form-check" />
+                            <span>Morning</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <input type="checkbox" name="timings" id="evening" value="evening" class="form-check" />
+                            <span>Evening</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <input type="checkbox" name="timings" id="afternoon" value="afternoon" class="form-check" />
+                            <span>AfterNoon</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <input type="checkbox" name="timings" id="weekends" value="weekends" class="form-check" />
+                            <span>Weekends</span>
+                        </div>
+                        <span class="text-danger small" id="timingsError"></span>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="d-flex flex-column gap-2">
+                        <label for="residentialAddress">Residential Address<span class="text-danger">*</span></label>
+                        <input type="text" name="residentialAddress" id="residentialAddress" class="form-control"
+                            required>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="city">City<span class="text-danger">*</span></label>
+                        <input type="text" name="city" id="city" class="form-control" required>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="pinCode">Pin code<span class="text-danger">*</span></label>
+                        <input type="number" name="pinCode" id="pinCode" class="form-control" required>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="d-flex flex-column gap-2">
+                        <label for="guardianName">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" id="guardianName" name="guardianName" class="form-control"
+                            placeholder="Enter guardian's full name" required>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="guardianMobile">Mobile Number <span class="text-danger">*</span></label>
+                        <input type="text" id="guardianMobile" name="guardianMobile" class="form-control"
+                            placeholder="Enter guardian's mobile number" required>
+                        <span id="guardianMobileError" class="text-danger"></span>
+                    </div>
+                </section>
+
+                
                 <div class="d-flex gap-3 justify-content-center align-items-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
