@@ -67,13 +67,25 @@
                     <div class="d-flex flex-column gap-2">
                         <label for="qualification" class="text-capitalize fw-medium">highest education
                             qualification<span class="text-danger">*</span></label>
-                        <input type="text" name="qualification" id="qualification" class="form-control"
-                            placeholder="Enter your highest education qualification" required>
-
+                        <select name="qualification" id="qualification" class="form-select">
+                            <option value="">Select Qualification</option>
+                            <option value="10">Matriculation</option>
+                            <option value="12">Intermediate</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="UG">Graduation</option>
+                            <option value="PG">Post Graduation</option>
+                        </select>
                         <span id="qualificationError" class="text-danger"></span>
                     </div>
+                    <div class="p-2 mt-2">
+                        <label for="marks" class="form-label fw-medium">Percentage/Grade <span
+                                class="text-danger">*</span></label>
+                        <input type="text" name="marks" id="marks" class="form-control" placeholder="90% or A-F" />
+                        <span class="text-danger small" id="marksError"></span>
+                    </div>
+                </section>
 
-
+                <section>
 
                     <div class="d-flex flex-column gap-2">
                         <label for="course">Preferred Course<span class="text-danger">*</span></label>

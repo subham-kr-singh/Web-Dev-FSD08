@@ -10,7 +10,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
   //Academic Details:
   const highestQualification = document.getElementById("qualification").value;
-
+  const marks = document.getElementById("marks").value;
   //Course Information:
   const course = document.getElementById("course").value;
   const timings = [];
@@ -27,12 +27,31 @@ document.querySelector("form").addEventListener("submit", (event) => {
   const guardianName = document.getElementById("guardianName").value;
   const guardianPhone = document.getElementById("guardianMobile").value;
 
+  // save data in Json form
+  const registrationData = {
+    fullName: fullName,
+    email: email,
+    phone: phone,
+    dob: dob,
+    gender: gender,
+    highestQualification: highestQualification,
+    marks: marks,
+    course: course,
+    timings: timings,
+    address: address,
+    city: city,
+    pincode: pincode,
+    guardianName: guardianName,
+    guardianPhone: guardianPhone,
+  };
+
   console.log(fullName);
   console.log(email);
   console.log(phone);
   console.log(dob);
   console.log(gender);
   console.log(highestQualification);
+  console.log(marks);
   console.log(course);
   console.log(address);
   console.log(city);
@@ -42,12 +61,13 @@ document.querySelector("form").addEventListener("submit", (event) => {
   console.log(timings);
 
   // define uncheck and blank on all input fields
-  document.getElementById("fullName").value = ""; 
+  document.getElementById("fullName").value = "";
   document.getElementById("email").value = "";
   document.getElementById("mobile").value = "";
   document.getElementById("dob").value = "";
   document.querySelector("input[name='gender']:checked").checked = false;
   document.getElementById("qualification").value = "";
+  document.getElementById("marks").value = "";
   document.getElementById("course").value = "";
   document.getElementById("residentialAddress").value = "";
   document.getElementById("city").value = "";
@@ -57,7 +77,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
   document.querySelectorAll("input[name='timings']:checked").forEach((item) => {
     item.checked = false;
   });
-
 });
 
 document.querySelector("form").addEventListener("reset", (event) => {
