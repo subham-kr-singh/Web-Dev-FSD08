@@ -27,7 +27,8 @@ document.querySelector("form").addEventListener("reset", (event) => {
 });
 
 function StoreToLocalStorage(data) {
-  let existingData = JSON.parse(localStorage.getItem("data")) || [];
+  const existingData = JSON.parse(localStorage.getItem("data")) || [];
   existingData.push(data);
   localStorage.setItem("data", JSON.stringify(existingData));
 }
+
