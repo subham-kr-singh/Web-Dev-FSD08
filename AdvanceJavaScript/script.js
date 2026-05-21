@@ -41,3 +41,47 @@
  * Promise
  * **/
 
+// function getData(Value) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (Value === 5) {
+//         console.log("pending");
+//       } else {
+//         console.log(Value);
+//         resolve("Quaery Solved");
+//       }
+//     }, 1000);
+//   });
+// }
+
+// getData(1).then(() => getData(2))
+//   .then(() => getData(3))
+//   .then(() => getData(4))
+//   .then(() => getData(5))
+//   .then(() => getData(6))
+//   .then(() => getData(7))
+//   .catch((rej) => console.log(rej));
+
+/**
+ * Async await
+ * **/
+
+// async function sum(val) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log(val * 2);
+//       resolve("Quaery Solved");
+//     }, 3000);
+//   });
+// }
+
+// await sum(10);
+// await sum(20);
+// await sum(30);
+// await sum(40);
+
+for (let i = 1; i < 10; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, i * 1000);
+}
