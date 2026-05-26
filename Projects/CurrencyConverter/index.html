@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Currency Converter</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="main-wrapper">
+
+    <!-- TOP BADGES -->
+    <div class="top-badges">
+
+      <div class="badge-box">
+        <i class="bi bi-calendar3"></i>
+        Daily Design Challenge
+      </div>
+
+      <div class="badge-box" style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+        <!-- Bootstrap Icon -->
+        <i class="bi bi-calendar3"></i>
+
+        <!-- Seamless Flat Date Input -->
+        <input type="date" id="badgeCalendar" class="form-control border-0 bg-transparent p-0 shadow-none" style="
+      cursor: pointer;
+      width: auto;
+      color: inherit;
+      font-weight: inherit;
+    ">
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="converter-card">
+
+      <!-- TOP -->
+      <div class="currency-section top-section">
+
+        <div class="left-content">
+          <span class="label-text">
+            Amount
+          </span>
+
+          <input type="number" id="fromAmount" value="1" />
+
+          <p class="small-price">
+            $34,408.24
+          </p>
+        </div>
+
+        <div class="right-content">
+
+          <select id="fromCurrency">
+          </select>
+
+        </div>
+
+      </div>
+
+      <!-- SWAP -->
+      <div class="swap-wrapper">
+
+        <button onclick="swapCurrencies()" class="swap-btn">
+          <i class="bi bi-chevron-down"></i>
+        </button>
+
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="currency-section bottom-section">
+
+        <div class="left-content">
+          <span class="label-text">
+            Converted to
+          </span>
+
+          <input type="text" id="toAmount" readonly />
+
+          <p class="small-price">
+            kr393,492.63
+          </p>
+        </div>
+
+        <div class="right-content">
+
+          <select id="toCurrency">
+          </select>
+
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="card-footer-custom">
+
+        <p>
+          Mid-market rate
+          <span id="liveRate">
+            11.43
+          </span>
+          INR
+        </p>
+
+        <span id="liveTime">
+        </span>
+
+      </div>
+
+      <!-- BUTTON -->
+      <button onclick="swapCurrencies()" class="swap-main-btn">
+        Swap
+      </button>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
