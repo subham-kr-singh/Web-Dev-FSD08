@@ -23,15 +23,15 @@ let data = "";
 // FETCH API DATA
 async function fetchCurrencyData(date) {
 
-    const response = await fetch(
-      `https://${date}.currency-api.pages.dev/v1/currencies/eur.json`
-    );
+  const response = await fetch(
+    `https://${date}.currency-api.pages.dev/v1/currencies/eur.json`
+  );
 
-    data = await response.json();
+  data = await response.json();
 
-    generateDropdowns();
+  generateDropdowns();
 
-    getInfo();
+  getInfo();
 
 }
 
