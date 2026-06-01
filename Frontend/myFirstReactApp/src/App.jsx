@@ -1,18 +1,27 @@
+import Home from "./Pages/Home";
+import ContactUs from "./Pages/ContactUs";
+import About from "./Pages/About";
+import Login from "./Pages/Login";
+import Product from "./Pages/Product";
+import Register from "./Pages/Register";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Left from "./components/Left";
-import Right from "./components/Right";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <div className="vh-100 d-flex flex-column">
+      <BrowserRouter>
         <Header />
-        <div className="w-100 d-flex" id="main">
-          <Left />
-          <Right />
-        </div>
-        <Footer />
-      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
