@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import Product from "./Pages/Product";
 import Register from "./Pages/Register";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

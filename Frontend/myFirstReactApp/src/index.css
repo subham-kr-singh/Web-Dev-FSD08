@@ -38,11 +38,11 @@ body {
   background-size: cover;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000;
 }
 
-.vh-fit{
+.vh-fit {
   height: 92vh !important;
 }

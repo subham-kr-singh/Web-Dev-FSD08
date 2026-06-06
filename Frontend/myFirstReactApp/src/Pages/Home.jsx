@@ -9,7 +9,6 @@ function Home() {
         <Left />
         <Right />
       </div>
-      <Footer />
     </>
   );
 }

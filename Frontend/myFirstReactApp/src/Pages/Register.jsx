@@ -1,5 +1,9 @@
 function Register() {
-  return <div>Register</div>;
+  return (
+    <div className="vh-fit d-flex align-items-center justify-content-center">
+      Register
+    </div>
+  );
 }
 
 export default Register;
