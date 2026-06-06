@@ -39,11 +39,16 @@ function Home() {
           </p>
 
           <div className="d-flex justify-content-between align-items-center mt-2 p-2">
-            <span className="text-uppercase fw-lighter fs-4">
+            <span className="fw-lighter fs-4">
               let's build something <br /> meaningful together
             </span>
 
-            <Btn />
+            <Btn
+              btnBg={"btn-orange"}
+              btnText={"text-white"}
+              arrowBg={"bg-white"}
+              arrowText={"text-orange"}
+            />
           </div>
         </div>
       </div>

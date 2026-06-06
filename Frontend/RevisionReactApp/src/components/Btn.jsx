@@ -1,10 +1,12 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
-function Btn() {
+function Btn({ btnBg, btnText, arrowBg, arrowText }) {
   return (
     <>
-      <span className="btn btn-warning bg-orange rounded-5 d-flex align-items-center justify-content-center gap-2 text-white">
+      <span
+        className={`btn btn-warning ${btnText} ${btnBg} rounded-5 d-flex align-items-center justify-content-center gap-2`}>
         Get in Touch{" "}
-        <span className="rounded-circle bg-white text-orange p-1 d-flex align-items-center justify-content-center">
+        <span
+          className={`${arrowBg} ${arrowText} rounded-circle  p-1 d-flex align-items-center justify-content-center`}>
           <FaLongArrowAltRight />
         </span>
       </span>

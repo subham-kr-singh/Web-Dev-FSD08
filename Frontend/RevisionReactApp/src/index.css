@@ -27,6 +27,37 @@ body {
   background-color: rgb(233, 126, 3) !important;
 }
 
+.btn-orange {
+  /* Inject variables directly into Bootstrap's internal hooks */
+  --bs-btn-color: #ffffff !important;
+  --bs-btn-bg: rgb(233, 126, 3) !important;
+  --bs-btn-border-color: rgb(233, 126, 3) !important;
+
+  --bs-btn-hover-color: #ffffff !important;
+  --bs-btn-hover-bg: rgb(210, 110, 2) !important;
+  --bs-btn-hover-border-color: rgb(210, 110, 2) !important;
+
+  --bs-btn-active-color: #ffffff !important;
+  --bs-btn-active-bg: rgb(190, 100, 1) !important;
+  --bs-btn-active-border-color: rgb(190, 100, 1) !important;
+
+  --bs-btn-disabled-color: rgba(255, 255, 255, 0.65) !important;
+  --bs-btn-disabled-bg: rgb(233, 126, 3) !important;
+  --bs-btn-disabled-border-color: rgb(233, 126, 3) !important;
+
+  /* Explicit structural overrides to prevent layout bleeding */
+  color: var(--bs-btn-color) !important;
+  background-color: var(--bs-btn-bg) !important;
+  border-color: var(--bs-btn-border-color) !important;
+}
+
+/* Ensure the hover state updates correctly */
+.btn-orange:hover {
+  color: var(--bs-btn-hover-color) !important;
+  background-color: var(--bs-btn-hover-bg) !important;
+  border-color: var(--bs-btn-hover-border-color) !important;
+}
+
 .mt-full {
   margin-top: 35%;
 }

@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <>
       <div
         id="header"
-        className="bg-light text-black border border-1 bottom-2 d-flex justify-content-between align-items-center">
+        className="bg-transparent text-black border border-1 bottom-2 d-flex justify-content-between align-items-center nav navbar">
         <div className="fs-4 fw-bold">
           <span>LOGO</span>
         </div>
@@ -41,6 +42,8 @@ function Header() {
           <Link to={"register"}>
             <button className="btn btn-success">Register</button>
           </Link>
+          {/* <button className="btn btn-outline-success" onClick={}>Login</button>
+          <button className="btn btn-success" onClick={() => navigate("/register")}>Register</button> */}
         </div>
       </div>
     </>

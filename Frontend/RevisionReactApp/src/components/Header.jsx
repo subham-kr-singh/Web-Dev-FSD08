@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <div className="d-flex align-items-center justify-content-between p-3 navbar navbar-dark bg-transparent fixed-top text-white">
-        <span className="fs-2 fw-bolder">LOGO</span>
+        <span className="fs-2 fw-bolder">Foliobolx<span className="fs-6 text-orange">&reg;</span> </span>
         <div className="d-flex align-items-center justify-content-center gap-4">
           <Link to={"/"} className="text-decoration-none text-white">
             Home
@@ -21,12 +21,12 @@ function Header() {
           <span>About</span>
           <span>Project</span>
 
-          <span className="btn btn-light rounded-5 d-flex align-items-center justify-content-center gap-2">
-            Get in Touch{" "}
-            <span className="rounded-circle bg-orange text-white p-1 d-flex align-items-center justify-content-center">
-              <FaLongArrowAltRight />
-            </span>
-          </span>
+          <Btn
+            btnBg={"btn-light"}
+            btnText={"text-orange"}
+            arrowBg={"bg-orange"}
+            arrowText={"text-white"}
+          />
         </div>
       </div>
     </>
