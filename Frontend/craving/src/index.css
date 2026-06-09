@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-orange {
+    background: #C2410C !important;
+}
+
+.text-orange {
+    color: #C2410C !important;
+}
+
+/* Chaining .btn.btn-orange forces Bootstrap to use these variables immediately */
+.btn.btn-orange {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #C2410C;
+    --bs-btn-border-color: #C2410C;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #9A3412;
+    --bs-btn-hover-border-color: #7C2D12;
+    --bs-btn-focus-shadow-rgb: 218, 92, 42;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #7C2D12;
+    --bs-btn-active-border-color: #63240F;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #C2410C;
+    --bs-btn-disabled-border-color: #ffffff;
+
+    /* These explicit fallbacks ensure the color renders immediately */
+    color: var(--bs-btn-color);
+    background-color: var(--bs-btn-bg);
+    border-color: var(--bs-btn-border-color);
+}
+
+.vh-70 {
+    height: 70vh !important;
+}
+
+.vh-60 {
+    height: 55vh !important;
+}
+
+#icon {
+
+    /* Set your desired width here */
+    width: 100px;
+
+    /* Forces the height to scale proportionally so the logo doesn't stretch */
+    height: auto;
+
+    /* Prevents distortion if both width and height are strictly locked */
+    object-fit: contain;
+
+}
+
+.hero-bg-img {
+    background-image: url("./assets/hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Card Container Base Setup */
+.hover-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Card Hover Interactions */
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Image Scaling Zoom Rule */
+.hover-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Smooth transition for the structural image tag */
+.hover-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Custom utility for the deep font weight match */
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* Rounded corners setup (Matches Bootstrap .rounded-4) */
+.card.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+/* Floating Star Rating Background color */
+.badge-rating {
+    background-color: #C2410C;
+    /* Your brand orange */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tag Pills styling from the screenshot */
+.custom-tag {
+    background-color: #E6DDD3;
+    /* Subtle warm grey background */
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+/* Deep Solid Orange Action Button styling */
+.btn-orange {
+    background-color: #C2410C !important;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-orange:hover {
+    background-color: #9A3412 !important;
+    transform: scale(1.01);
+}
+
+/* Custom utility for the deep font weight match */
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* Rounded corners setup (Matches Bootstrap .rounded-4) */
+.card.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+/* Floating Star Rating Background color */
+.badge-rating {
+    background-color: #C2410C;
+    /* Your brand orange */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tag Pills styling from the screenshot */
+.custom-tag {
+    background-color: #E6DDD3;
+    /* Subtle warm grey background */
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+/* Deep Solid Orange Action Button styling */
+.btn-orange {
+    background-color: #C2410C !important;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-orange:hover {
+    background-color: #9A3412 !important;
+    transform: scale(1.01);
+}
+
+/* Card Zoom Interaction Mechanics */
+.hover-card {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease-in-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.hover-card img {
+    transition: transform 0.4s ease-in-out;
+}
+
+.hover-card:hover img {
+    transform: scale(1.06);
+    /* Zooms image slightly within its boundary box */
+}
+
+.bg-grade {
+    background: #C2410C !important;
+    background: linear-gradient(180deg, rgba(194, 65, 12, 1) 0%, rgba(252, 252, 252, 1) 100%) !important;
+}
+
+.w-20 {
+    width: 12% !important;
+}
+
+.bg-night {
+    background: #3F3F46 !important;
+}
+
+.bg-login {
+    height: 90vh !important;
+    background-image: url("./assets/HeroBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Custom utility class to match Bootstrap's engine */
+.focus-ring-orange {
+    --bs-focus-ring-color: rgba(194, 65, 12, 0.25);
+    /* #C2410C with 25% opacity */
+}
+
+/* Optional: Changes the internal input border color during hover/focus to match */
+.focus-ring-orange:focus,
+.focus-ring-orange:hover {
+    border-color: #C2410C !important;
+}
