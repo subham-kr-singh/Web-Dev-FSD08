@@ -18,7 +18,7 @@ const CartCard = () => {
     <div className="h-50 w-full bg-white flex justify-between items-center px-3 border border-zinc-200">
       {/* Product Information Section */}
       <div className="flex items-center gap-4 flex-1">
-        <div className="w-24 h-24 flex-shrink-0">
+        <div className="w-24 h-24 shrink-0">
           <img
             src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
             alt="product"
