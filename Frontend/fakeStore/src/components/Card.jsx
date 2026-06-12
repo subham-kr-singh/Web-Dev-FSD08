@@ -27,7 +27,7 @@ const Card = () => {
 
           <div className="flex justify-between items-center w-full">
             <span className="text-4xl font-bold">$ {190}</span>
-            <span className="flex items-center justify-between gap-0.5">
+            <span className="flex items-center justify-between gap-1.5">
               <div className="flex items-center justify-between gap-0.5 text-amber-400">
                 <FaRegStar />
                 <FaRegStar />
