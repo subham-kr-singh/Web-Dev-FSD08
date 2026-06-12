@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [messsage, setMessage] = useState("");
+
   return (
     <>
       <div className="flex flex-col items-center justify-center bg-stone-100 gap-5 pb-15">
@@ -11,20 +16,52 @@ const Contact = () => {
             <h1 className="text-3xl font-bold">Get in Touch</h1>
             <form className="flex flex-col items-start justify-center gap-3 *:text-xl [&_input]:bg-white [&_input]:w-90 [&_input]:rounded-xl [&_input]:py-2 [&_input]:border [&_input]:px-4">
               <label htmlFor="name">Your name</label>
-              <input type="text" name="name" />
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
 
-              <label htmlFor="name">Your email</label>
-              <input type="email" name="email" />
+              <label htmlFor="email">Your email</label>
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
 
               <label htmlFor="subject">subject</label>
-              <input type="text" name="subject" />
+              <input
+                type="text"
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
 
               <label htmlFor="messsage">Your messsage</label>
               <textarea
                 name="messsage"
+                value={messsage}
+                onChange={(e) => setMessage(e.target.value)}
                 className="bg-white h-50 w-90 resize-none border rounded-xl p-4"></textarea>
 
-              <button className="py-2 w-full bg-amber-500 rounded-2xl text-white font-medium">
+              <button
+                className="py-2 w-full bg-amber-500 rounded-2xl text-white font-medium hover:bg-amber-600 transition-colors hover:shadow-lg"
+                onClick={(event) => {
+                  event.preventDefault();
+                  console.log({
+                    name,
+                    email,
+                    subject,
+                    messsage,
+                  });
+
+                  setName("");
+                  setEmail("");
+                  setSubject("");
+                  setMessage("");
+                }}>
                 Send messsage
               </button>
             </form>

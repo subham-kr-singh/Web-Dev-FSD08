@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { FaStore } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { PiUserCircle } from "react-icons/pi";
+import { IoIosSearch } from "react-icons/io";
+
 
 const Header = () => {
   return (
@@ -22,16 +24,23 @@ const Header = () => {
           <Link to={"/contact"}>Contact</Link>
         </div>
         <div className="flex justify-center items-center gap-5">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search Product.."
-            className="border rounded-full px-3 py-2 w-66 bg-zinc-50"
-          />
+          <div className="relative w-full max-w-md">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+              <IoIosSearch />
+            </div>
+
+            <input
+              type="text"
+              name="search"
+              placeholder="Search Product.."
+              className="border rounded-full px-3 py-2 w-66 pr-10 pl-10 bg-zinc-50"
+            />
+          </div>
+
           <Link to={"/cart"}>
             <MdOutlineShoppingCart className="text-3xl" />
           </Link>
-          <PiUserCircle className="text-3xl" />
+          <PiUserCircle className="text-5xl font-bold" />
         </div>
       </div>
     </>

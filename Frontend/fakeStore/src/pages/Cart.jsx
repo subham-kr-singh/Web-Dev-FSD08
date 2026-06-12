@@ -20,7 +20,7 @@ const Cart = () => {
 
             <hr class="w-full h-0.5 bg-gray-300 border-0 rounded" />
 
-            <div className="flex flex-col w-full text-xl">
+            <div className="flex flex-col w-full">
               <div className="flex justify-between w-full items-center [&_span]:font-medium">
                 <span>Subtotal</span>
                 <span>$ {190}</span>
@@ -57,7 +57,7 @@ const Cart = () => {
               <span>$ {190}</span>
             </div>
 
-            <button className="text-white bg-amber-500 hover:bg-amber-600 hover:shadow rounded-2xl w-full py-3">
+            <button className="text-white bg-amber-500 hover:bg-amber-600 hover:shadow rounded-xl w-full py-3">
               Proceed to Checkout
             </button>
           </div>
