@@ -9,7 +9,7 @@ import { IoIosSearch } from "react-icons/io";
 const Header = () => {
   return (
     <>
-      <div className="p-8 flex items-center justify-between">
+      <div className="p-8 flex items-center justify-between bg-white sticky top-0 z-50">
         <Link to={"/"}>
           <div className="flex items-center justify-center gap-2 text-2xl">
             <FaStore />
