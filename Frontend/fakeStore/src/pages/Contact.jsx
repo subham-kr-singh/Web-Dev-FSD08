@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="flex flex-col items-center justify-center bg-stone-100 gap-5 pb-15">
         <span className="text-5xl font-bold mt-5 my-8">Contact Us</span>
         <div className="flex justify-between items-center gap-15">
-          <div className=" bg-white shadow-xl rounded-xl flex flex-col items-start justify-center px-10 py-5 gap-10 h-fit">
+          <div className=" bg-white shadow-xl rounded-xl flex flex-col items-start justify-center px-8 py-5 gap-8 h-fit">
             <h1 className="text-3xl font-bold">Get in Touch</h1>
             <form className="flex flex-col items-start justify-center gap-3 *:text-xl [&_input]:bg-white [&_input]:w-90 [&_input]:rounded-xl [&_input]:py-2 [&_input]:border [&_input]:px-4">
               <label htmlFor="name">Your name</label>
