@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegStar } from "react-icons/fa";
+import Rating from "./Rating";
 
 const Card = () => {
   return (
@@ -13,7 +13,7 @@ const Card = () => {
           />
         </div>
         <div className="p-3 flex flex-col items-start justify-between gap-3 px-5">
-          <span className="px-2 py-0.5 text-[15px] rounded-full bg-emerald-500 text-white">
+          <span className="px-2 py-0.5 text-sm rounded-full bg-emerald-500 text-white">
             {"men's clothing"}
           </span>
           <span className="font-medium text-xl">
@@ -27,16 +27,7 @@ const Card = () => {
 
           <div className="flex justify-between items-center w-full">
             <span className="text-4xl font-bold">$ {190}</span>
-            <span className="flex items-center justify-between gap-1.5">
-              <div className="flex items-center justify-between gap-0.5 text-amber-400">
-                <FaRegStar />
-                <FaRegStar />
-                <FaRegStar />
-                <FaRegStar />
-                <FaRegStar />
-              </div>
-              <span>{4.5}/5</span>
-            </span>
+            <Rating />
           </div>
 
           {/* <button className="rounded-full bg-amber-500 p-3 text-white w-full hover:bg-amber-700 hover:shadow-xl">
