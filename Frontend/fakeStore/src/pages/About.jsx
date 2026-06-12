@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-col items-center bg-stone-100 gap-5 p-10">
         <span className="font-bold text-5xl">About fakeStore</span>
 
-        <div className="flex justify-center border w-200 p-10">
+        <div className="flex justify-center w-200 p-10">
           <div className="w-1/2 flex flex-col gap-3 items-start justify-center">
             <span className="font-bold text-3xl">Our Mission.</span>
             <p className="font-medium text-2xl">
@@ -18,11 +18,16 @@ const About = () => {
               API.
             </p>
           </div>
-          <div className="w-1/2 border"></div>
+          <div className="w-1/2 border rounded-2xl"></div>
         </div>
 
-        <div className="flex *:rounded-2xl gap-5 *:h-80 *:w-120 *:border *:bg-white *:[&_span]:text-3xl *:[&_span]:font-bold *:[&_p]:text-xl *:[&_p]:font-medium *:[&_div]:flex *:[&_div]:flex-col *:[&_div]:items-start *:[&_div]:justify-center *:[&_div]:gap-3 *:[&_div]:p-5">
+        <div className="flex *:rounded-2xl gap-5 *:h-fit *:w-120 *:border *:bg-white *:[&_span]:text-3xl *:[&_span]:font-bold *:[&_p]:text-xl *:[&_p]:font-medium *:[&_div]:flex *:[&_div]:flex-col *:[&_div]:items-start *:[&_div]:justify-center *:[&_div]:gap-3 *:[&_div]:p-5">
           <div className="">
+            <img
+              src=""
+              alt=""
+              className="w-full h-45 object-cover rounded-xl"
+            />
             <div>
               <span>Built for Learning</span>
               <p>
@@ -33,6 +38,11 @@ const About = () => {
             </div>
           </div>
           <div className="">
+            <img
+              src=""
+              alt=""
+              className="w-full h-45 object-cover rounded-xl"
+            />
             <div>
               <span>Powered by Community Data</span>
               <p>

@@ -40,7 +40,7 @@ const Cardver = () => {
 
           <div className="flex items-center justify-between w-full">
             <span className="text-3xl font-bold">$ {109.95}</span>
-            <button className="bg-amber-500 p-3 px-5 rounded-full w-1/3 hover:bg-amber-600 hover:shadow-xl text-white flex items-center justify-center gap-1.5">
+            <button className="bg-amber-500 p-3 px-5 rounded-full w-1/3 hover:bg-amber-600 transition-colors hover:shadow-lg text-white flex items-center justify-center gap-1.5">
               <span>
                 <FaCartShopping />
               </span>

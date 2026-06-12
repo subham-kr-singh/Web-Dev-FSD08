@@ -44,7 +44,7 @@ const Cart = () => {
                   name="promoCode"
                   className="px-1.5 py-1 rounded border-[0.2px]"
                 />
-                <button className="bg-amber-500 px-4 py-1 rounded text-white hover:bg-amber-600 hover:shadow-xl">
+                <button className="bg-amber-500 px-4 py-1 rounded text-white hover:bg-amber-600 transition-colors hover:shadow-lg">
                   Apply
                 </button>
               </div>
@@ -57,7 +57,7 @@ const Cart = () => {
               <span>$ {190}</span>
             </div>
 
-            <button className="text-white bg-amber-500 hover:bg-amber-600 hover:shadow rounded-xl w-full py-3">
+            <button className="text-white bg-amber-500 hover:bg-amber-600 transition-colors hover:shadow-lg rounded-xl w-full py-3">
               Proceed to Checkout
             </button>
           </div>

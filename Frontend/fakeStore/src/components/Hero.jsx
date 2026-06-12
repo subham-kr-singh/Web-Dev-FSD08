@@ -10,14 +10,16 @@ const Hero = () => {
             Unleash your shopping potential
           </span>
           <Link to={"/product"}>
-            <button className="bg-blue-700 py-2 rounded-full px-10 text-white font-medium hover:bg-blue-800 hover:shadow">
+            <button className="bg-blue-700 py-2 rounded-full px-10 text-white font-medium hover:bg-blue-800 transition-colors hover:shadow-lg">
               Shop Now
             </button>
           </Link>
         </div>
 
         <div className="flex items-end justify-end w-full pb-8 px-4">
-            <span className="text-2xl font-semibold text-zinc-500">Powered by the Fake Store API.</span>
+          <span className="text-2xl font-semibold text-zinc-500">
+            Powered by the Fake Store API.
+          </span>
         </div>
       </div>
     </>
