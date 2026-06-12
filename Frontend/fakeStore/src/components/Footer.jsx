@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="w-full bg-sky-950 text-slate-200">
         {/* Top Section: Branding & Intro */}
         <div className="flex flex-col items-center justify-center border-b border-sky-900 gap-4 p-10 text-center">
-          <span className="text-4xl font-bold text-white">fakeStore</span>
+          <span className="text-4xl font-bold text-white">FakeStore</span>
           <p className="text-xl text-slate-300 max-w-2xl">
             A modern e-commerce frontend demonstration powered by the Fake Store
             API. Built for learning UI/UX and dynamic data integration.
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <span className="font-bold text-2xl text-white">Resources</span>
             <a
-              href="https://fakestoreapi.com"
+              href="https://fakestoreapi.com/docs"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg text-slate-400 hover:text-white hover:underline transition-colors">

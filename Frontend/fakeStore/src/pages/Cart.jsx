@@ -9,12 +9,14 @@ const Cart = () => {
     <>
       <div className="flex flex-col justify-center items-start gap-10 bg-stone-100 px-15 py-10">
         <span className="text-3xl font-bold">My Cart</span>
-        <div className="flex justify-between items-center w-full gap-10">
+        <div className="flex justify-center items-start w-full gap-10">
           <div className=" w-5xl">
             <CartCard />
             <CartCard />
             <CartCard />
           </div>
+
+
           <div className=" w-100 bg-white rounded-2xl flex flex-col p-10 items-start justify-center shadow gap-5">
             <span className="text-3xl font-bold">Order Summary</span>
 
@@ -61,6 +63,7 @@ const Cart = () => {
               Proceed to Checkout
             </button>
           </div>
+
         </div>
       </div>
     </>

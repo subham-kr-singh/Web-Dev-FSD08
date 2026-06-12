@@ -5,11 +5,8 @@ import { MdAddBox } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const CartCard = () => {
-  // 1. Moved state inside the component and used camelCase
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(1);
   const unitPrice = 120;
-
-  // 2. Safely decrement preventing negative quantities
   const handleDecrement = () => {
     if (count > 1) setCount(count - 1);
   };
