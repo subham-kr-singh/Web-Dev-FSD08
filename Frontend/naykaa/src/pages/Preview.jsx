@@ -96,7 +96,7 @@ const Preview = () => {
 
           {/* SECTION: CONTENT */}
           <div className="mt-8 md:mt-0 flex flex-col">
-            <div className="flex-grow">
+            <div className="grow">
               <p className="text-pink-600 font-bold text-xs uppercase tracking-widest mb-1">
                 {product.brand}
               </p>
@@ -177,7 +177,7 @@ const Preview = () => {
 
             {/* ACTION FOOTER */}
             <div className="flex gap-4 sticky bottom-0 bg-white py-4 md:relative">
-              <button className="flex-[3] bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-200 transition-all flex items-center justify-center gap-3 uppercase text-sm tracking-widest">
+              <button className="flex-3 bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-200 transition-all flex items-center justify-center gap-3 uppercase text-sm tracking-widest">
                 <BiShoppingBag className="text-xl" /> Add to Bag
               </button>
               <button className="flex-1 bg-white border-2 border-gray-100 text-gray-400 hover:text-gray-600 hover:border-gray-200 transition-all rounded-xl flex items-center justify-center">

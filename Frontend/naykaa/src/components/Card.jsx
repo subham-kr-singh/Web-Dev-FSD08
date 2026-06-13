@@ -22,7 +22,7 @@ const Card = ({ product }) => {
       </div>
 
       {/* Product Information */}
-      <div className="w-full text-center text-gray-700 font-medium p-4 flex flex-col gap-2 flex-grow">
+      <div className="w-full text-center text-gray-700 font-medium p-4 flex flex-col gap-2 grow">
         <p className="text-start font-semibold text-gray-900 truncate">
           {product.brand?.toUpperCase()}
         </p>
