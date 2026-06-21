@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const Card = ({ product }) => {
   const [likes, setLikes] = useState(0);
 
-  // Fallback image if api_featured_image is missing
   const productImage = product.api_featured_image
     ? `https:${product.api_featured_image}`
     : product.image_link;

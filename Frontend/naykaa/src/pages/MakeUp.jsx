@@ -39,9 +39,11 @@ const MakeUp = () => {
           </p>
         </div>
       ) : isError ? (
-        <p>Error: {errorMessage}</p>
+        <p className="p-20 text-center text-gray-500 m-60">
+          Error: {errorMessage}
+        </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-3/4 mx-auto mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:w-3/4 mx-auto mt-10">
           {products.map((product) => (
             <Card key={product.id} product={product} />
           ))}
