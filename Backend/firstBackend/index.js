@@ -2,12 +2,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
-
-const app = express();
-
 import AuthRouter from './src/routers/auth.route.js';
 import PublicRouter from './src/routers/public.route.js';
 import connectDB from './src/config/dbConnection.config.js';
+
+const app = express();
 
 const port = process.env.PORT || 5000;
 
@@ -31,6 +30,12 @@ app.use((err, req, res, next) => {
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to my first backend Project" });
 });
+
+app.use((req, res) => {
+    res.status(404).json({
+        message: "API not found"
+    })
+})
 
 app.listen(port, () => {
     console.log(`Server listen at http://localhost:${port}`);

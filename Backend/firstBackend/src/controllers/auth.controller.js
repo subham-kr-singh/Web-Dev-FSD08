@@ -1,27 +1,4 @@
-
 import User from "../models/user.model.js"
-
-export const login = async (req, res, next) => {
-    try {
-        const { email, password } = req.body;
-
-        if (!email || !password) {
-            const error = new Error("All Field Required")
-            error.statusCode = 404;
-            return next(error);
-        }
-
-        const existingUser = await User.findOne({ email, password });
-
-        const existingUserObj = existingUser.toObject();
-
-        res.status(200).json({ message: "User logged in successfully", data: existingUserObj });
-
-    } catch (error) {
-        console.log(error);
-        next(error);
-    }
-}
 
 export const register = async (req, res, next) => {
     try {
@@ -77,6 +54,60 @@ export const register = async (req, res, next) => {
     }
 }
 
+export const login = async (req, res, next) => {
+    try {
+        const { email, password } = req.body;
+
+        if (!email || !password) {
+            const error = new Error("All Field Required")
+            error.statusCode = 404;
+            return next(error);
+        }
+
+        const existingUser = await User.findOne({ email, password });
+
+        const existingUserObj = existingUser.toObject();
+
+        res.status(200).json({ message: "User logged in successfully", data: existingUserObj });
+
+    } catch (error) {
+        console.log(error);
+        next(error);
+    }
+}
+
+
 export const logout = (req, res) => {
     res.json({ message: "Logout Successfull from controller" })
 }
+
+// export const deleteuser = async (req, res, next) => {
+//     try {
+//         const { email, password } = req.body;
+
+//         if (!email || !password) {
+//             const error = new Error("All Field Requireds")
+//             error.statusCode = 400;
+//             return next(error);
+//         }
+//         await User.deleteOne({ email, password });
+
+//         res.status(200).json({
+//             message: "User delete Successfully"
+//         })
+//     } catch (error) {
+//         next(error);
+//     }
+// }
+
+
+// export const AllUser = async (req, res, next) => {
+//     try {
+//         const allUser = await User.find();
+//         res.status(200).json({
+//             allUser
+//         })
+//     } catch (error) {
+//         next(error)
+//     }
+// }
