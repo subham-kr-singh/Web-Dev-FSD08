@@ -1,16 +1,21 @@
+
 import User from "../models/user.model.js"
 
 export const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
 
-        if (!email || !passsword) {
+        if (!email || !password) {
             const error = new Error("All Field Required")
-            error.statusCode = 400;
+            error.statusCode = 404;
             return next(error);
         }
 
-        const user = await User.findOne({ email, password });
+        const existingUser = await User.findOne({ email, password });
+
+        const existingUserObj = existingUser.toObject();
+
+        res.status(200).json({ message: "User logged in successfully", data: existingUserObj });
 
     } catch (error) {
         console.log(error);
